@@ -1,30 +1,53 @@
 # Exp.No:3e
-## SEB - STRING SLICING
+## SEB - Write a Python program to find sequences of Lower case letters joined with a '#'.
 
----
 
 ### AIM  
-To write a Python function that accepts a string and forms a new string by reversing the characters from the **4th position to the 10th position** with **alternate characters**, and then prints the new string.
+To write a Python program to find sequences of Lower case letters joined with a '#'.
 
----
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Accept a string as input.  
-3. Take a slice of the input string from index **2** to **10** (Python uses 0-based indexing, so index 2 refers to the 3rd character, i.e., the 4th character in natural terms).  
-4. Reverse the sliced substring.  
-5. Extract every second character from the reversed substring using slicing (`[::2]`).  
-6. Print the final processed string.  
-7. Terminate the program.
+Start
 
----
+Import the re module (regular expressions)
 
+Input a string s from the user
+
+Use re.fullmatch() to check if s matches the pattern:
+'[a-z]*#+[a-z]+'
+This pattern means:
+
+Zero or more lowercase letters ([a-z]*)
+
+One or more # characters (#+)
+
+One or more lowercase letters again ([a-z]+)
+
+If the pattern matches:
+
+Print "Found a match!"
+
+Else:
+
+Print "Not matched!"
+
+End
 ### PROGRAM
+import re
 
-```
-```
+s=input()
+
+if re.fullmatch(r'[a-z]*#+[a-z]+',s):
+
+    print("Found a match!")
+else:
+
+    print("Not matched!")
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/41e456c6-c454-4edd-ada5-34da6a24d2bb)
+
 
 ### RESULT
+Thus, program to find sequences of Lower case letters joined with a '#', was implemented successfully.
