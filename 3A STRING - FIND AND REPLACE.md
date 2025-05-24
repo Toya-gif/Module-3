@@ -8,7 +8,7 @@ To write a python program to count the vowels of a given string.
 
 Start
 
-Declare a string variable str
+Declare a string variable stri
 
 Input a string from the user and store it in str
 
