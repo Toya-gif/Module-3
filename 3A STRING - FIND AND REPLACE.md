@@ -1,30 +1,63 @@
 # Exp.No:3a
-## STRING - FIND AND REPLACE
-
----
+## STRING - Complete the  python program to count the vowels of a given string.
 
 ### AIM  
-To write a Python function to accept a string, identify a word to be replaced, and replace it with a new word provided by the user.
-
----
+To write a python program to count the vowels of a given string.
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Input the original string `str1` and the word to be replaced `replace_str`.  
-3. Ask the user to input the new replacement word `str2`.  
-4. Use the `replace()` method in Python to replace all occurrences of `replace_str` in `str1` with `str2`.  
-5. Store the modified string in `str3`.  
-6. Display the original string (`str1`) and the modified string (`str3`).  
-7. Terminate the program.
+Start
 
----
+Declare a string variable str
+
+Input a string from the user and store it in str
+
+Create a dictionary vow with keys 'a', 'e', 'i', 'o', 'u', all initialized to 0
+
+Set a flag variable to False
+
+For each character i in the string str:
+
+If i is a key in vow:
+
+Increment vow[i] by 1
+
+Set flag = True
+
+After the loop:
+
+If flag is still False, print "There are no vowels in [str]"
+
+Else, for each vowel in the dictionary:
+
+If the count is greater than 0, print the vowel and its count
+
+End
 
 ### PROGRAM
+str=input()
 
-```
-```
+vow={'a':0,'e':0,'i':0,'o':0,'u':0}
+
+flag=False
+
+for i in str:
+
+    if i in vow:
+        vow[i]+=1
+        flag=True
+if flag==False:
+
+    print(f"There are no vowels in {str}")
+else:
+
+    for i in vow:
+        if vow[i]:
+            print(f"Vowel:  {i} {vow[i]}")
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/f831e1b6-dea2-4272-908b-f693714d4022)
+
 
 ### RESULT
+Thus, python program to count the vowels of a given string was implemented successfully.
